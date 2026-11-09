@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WhatsApp Bojonagara</title>
+</head>
+<body>
+  <h3>Menghubungkan ke WhatsApp...</h3>
+
+  <script>
+    const nomor = "6283820270179";
+    const params = new URLSearchParams(window.location.search);
+    const pesan = params.get("text") ||
+      "Informasi dari Aplikasi Bojonagara";
+
+    const url = "https://wa.me/" + nomor +
+      "?text=" + encodeURIComponent(pesan);
+
+    window.location.replace(url);
+  </script>
+</body>
+</html>
